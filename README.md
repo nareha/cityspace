@@ -1,2 +1,2 @@
 # CityScape
-## Find your safe space.
+## Live in your safe space.
