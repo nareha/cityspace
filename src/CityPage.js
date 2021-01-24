@@ -60,11 +60,11 @@ export default function CityPage(props) {
                             Leadership on LGBTQ Equality:<br></br>
                         </div>
                         <div className="numbers">
-                            {`${props.numbers[0]}/30`}<br></br>
-                            {`${props.numbers[1]}/28`}<br></br>
-                            {`${props.numbers[2]}/12`}<br></br>
-                            {`${props.numbers[3]}/22`}<br></br>
-                            {`${props.numbers[4]}/8`}
+                            {`${props.ratings[0]}/30`}<br></br>
+                            {`${props.ratings[1]}/28`}<br></br>
+                            {`${props.ratings[2]}/12`}<br></br>
+                            {`${props.ratings[3]}/22`}<br></br>
+                            {`${props.ratings[4]}/8`}
                         </div>
                     </div>
                     <div className="city-page-total-container">

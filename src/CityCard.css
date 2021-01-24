@@ -6,6 +6,7 @@
     border-radius: 20px;
     padding: 20px;
     margin: 0 15px;
+    width: 280px;
 }
 
 .city-card-name {
@@ -17,6 +18,7 @@
     width: 155px;
     height: 135px;
     margin: 15px;
+    border-radius: 10px;
 }
 
 .city-card-total {

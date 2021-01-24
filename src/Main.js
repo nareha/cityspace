@@ -3,19 +3,21 @@ import logo from './images/logo.svg';
 import searchButton from './images/searchButton.svg';
 import CityCard from './CityCard.js';
 import LA from './images/LA.svg';
+import Albany from './images/Albany.jpeg';
+import Phoenix from './images/Phoenix.jpg';
+import NYC from './images/nyc.jpg';
 import './Main.css';
 
 function App() {
 
+  const images = [Albany, Phoenix, LA, NYC];
+
   const citydata = require('./citydata.json');
 
-  const CityCards = Object.keys(citydata).map((city) => {
-    console.log(Object.values(citydata[city]));
+  const CityCards = Object.keys(citydata).map((city, index) => {
+    console.log(city);
 
-    const sum = Object.values(citydata[city]).
-    reduce((existing, current) => {return existing + current[0]}, 0);
-
-    return <CityCard id={city} city={city} total={`${sum} / 100`} img={LA} />
+    return <CityCard id={city} city={city} total={`${citydata[city].total} / 100`} img={images[index]} />
   })
 
   return (

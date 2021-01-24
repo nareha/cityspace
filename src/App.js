@@ -14,7 +14,7 @@ const db = {
   }
 }
 */
-const citydata = require('./citydatatest.json');
+const citydata = require('./citydata.json');
 
 function App() {
     return (

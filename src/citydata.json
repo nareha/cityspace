@@ -10,17 +10,6 @@
     ],
     "total": 98
   },
-  "Baton Rouge Louisiana": {
-    "city": "Baton Rouge Louisiana",
-    "ratings": [
-      0,
-      14,
-      5,
-      12,
-      3
-    ],
-    "total": 34
-  },
   "Phoenix Arizona": {
     "city": "Phoenix Arizona",
     "ratings": [
@@ -31,39 +20,6 @@
       8
     ],
     "total": 98
-  },
-  "Bismarck North Dakota": {
-    "city": "Bismarck North Dakota",
-    "ratings": [
-      30,
-      14,
-      5,
-      12,
-      2
-    ],
-    "total": 63
-  },
-  "Houston Texas": {
-    "city": "Houston Texas",
-    "ratings": [
-      0,
-      28,
-      5,
-      22,
-      8
-    ],
-    "total": 63
-  },
-  "Auburn Alabama": {
-    "city": "Auburn Alabama",
-    "ratings": [
-      0,
-      16,
-      5,
-      0,
-      0
-    ],
-    "total": 21
   },
   "Los Angeles California": {
     "city": "Los Angeles California",
