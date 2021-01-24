@@ -22,3 +22,7 @@ As unfortunate as it may be, living standards and societal treatment of LGBTQ+ p
 - We made sure to add alt values to every image so that our website will be accessible to everyone.
 - The website's font and color are soft on the eyes and easily readable.
 
+## Data Source
+
+We extracted our data from the [2020 Municipal Equality Index](https://www.hrc.org/resources/mei-2020-see-your-citys-score)
+
