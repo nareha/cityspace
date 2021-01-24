@@ -4,6 +4,7 @@ import searchButton from './images/searchButton.svg';
 import CityCard from './CityCard.js';
 import LA from './images/LA.svg';
 import './App.css';
+import CityPage from './CityPage.js';
 
 function App() {
   return (
@@ -20,13 +21,15 @@ function App() {
         <div className="top-cities">
           <h2>Top LGBTQ+ Friendly Cities:</h2>
           <div className="city-card-list">
-            <CityCard city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
+            <CityCard city="Los Angeles, CA" total="108 / 100" stars={5} img={LA} />
             <CityCard city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
             <CityCard city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
             <CityCard city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
             <CityCard city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
           </div>
         </div>
+        {/*move this later*/}
+        <CityPage city="Los Angeles, CA" img={LA}/>
       </body>
     </div>
   );

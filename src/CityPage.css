@@ -1,0 +1,24 @@
+.city-page-container {
+    background: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.city-page-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.city-page-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C2E9FF;
+    border-radius: 20px;
+}
+
+.criteria {
+    white-space: pre-wrap;
+}
