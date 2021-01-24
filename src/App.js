@@ -17,7 +17,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>CitySpace</h1>
         <form className="search-bar">
-          <input type="text" className="search-bar-text"></input>
+          <input type="text" className="search-bar-text" placeholder="How LGBTQ+ friendly is..."></input>
           <input type="image" src={searchButton} alt="search"></input>
         </form>
         <div className="top-cities">

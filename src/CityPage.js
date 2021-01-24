@@ -22,7 +22,7 @@ export default function CityPage(props) {
                             26/28<br></br>
                             7/12<br></br>
                             22/22<br></br>
-                            8<br></br>
+                            8/8<br></br>
                             +15
                         </div>
                     </div>
@@ -34,22 +34,26 @@ export default function CityPage(props) {
             </div>
             <div className="user-review-container">
                 <h2 className="user-review-title">User Reviews</h2>
-                <Review />
+                <Review user="user_name" stars={5} />
             </div>
             <form className="new-answer-form">
                 <div className="form-content">
-                    <label for="username">username:</label>
-                    <input type="text" id="username"></input>
-                    <label for="rating">rating:</label>
-                    <select id="rating">
-                        <option value={5}>5</option>
-                        <option value={4}>4</option>
-                        <option value={3}>3</option>
-                        <option value={2}>2</option>
-                        <option value={1}>1</option>
-                    </select><br></br>
-                    <label for="content">add review:</label>
-                    <textarea id="content"></textarea>
+                    <div className="form-content-top">
+                        <label for="username">username:</label>
+                        <input type="text" id="username" className="username-input"></input>
+                        <label for="rating">rating:</label>
+                        <select id="rating" className="rating-input">
+                            <option value={5}>5</option>
+                            <option value={4}>4</option>
+                            <option value={3}>3</option>
+                            <option value={2}>2</option>
+                            <option value={1}>1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="content">add review:</label>
+                        <textarea id="content" className="content-input"></textarea>
+                    </div>
                 </div>
                 <input type="submit" className="submit-button"></input>
             </form>

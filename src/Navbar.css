@@ -11,6 +11,8 @@
     background:white;
     min-width: 50%;
     font-weight: 800;
+    box-shadow: 0 6px 7px -5px gray;
+    z-index: 1;
   }
 
 .title {
@@ -38,4 +40,24 @@
     margin-top: 0.65rem;
     margin-left: 2rem;
     margin-right: 3.5rem;
+}
+
+.outline {
+    border: 2px #C0C0C0 solid;
+    box-shadow: none;
+    border-radius: 20px;
+    width: 450px;
+    height: 50px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.small-font {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+}
+
+.small-search-button {
+    width: 33px;
+    height: 33px;
 }
