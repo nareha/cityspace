@@ -1,1 +1,68 @@
-{"non-disc laws": [30, 30], "municipality as employer": [26, 28], "municipal services": [7, 12], "leadership on equality": [8, 8], "law enforcement": [22, 22]}
+{
+  "Baton-Rouge-Louisiana": {
+    "non-disc laws": [
+      0,
+      30
+    ],
+    "municipality as employer": [
+      14,
+      28
+    ],
+    "municipal services": [
+      5,
+      12
+    ],
+    "leadership on equality": [
+      3,
+      8
+    ],
+    "law enforcement": [
+      12,
+      22
+    ]
+  },
+  "Auburn-Alabama": {
+    "non-disc laws": [
+      0,
+      30
+    ],
+    "municipality as employer": [
+      16,
+      28
+    ],
+    "municipal services": [
+      5,
+      12
+    ],
+    "leadership on equality": [
+      0,
+      8
+    ],
+    "law enforcement": [
+      0,
+      22
+    ]
+  },
+  "Los-Angeles-California": {
+    "non-disc laws": [
+      30,
+      30
+    ],
+    "municipality as employer": [
+      26,
+      28
+    ],
+    "municipal services": [
+      7,
+      12
+    ],
+    "leadership on equality": [
+      8,
+      8
+    ],
+    "law enforcement": [
+      22,
+      22
+    ]
+  }
+}
