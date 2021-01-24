@@ -1,8 +1,10 @@
 import './CityPage.css';
+import './Main.css';
 import Review from './Review.js';
 
 export default function CityPage(props) {
     return (
+        <>
         <div className="city-page-container">
             <h1 className='city-page-title'>{props.city}</h1>
             <div className="city-page-info">
@@ -58,5 +60,7 @@ export default function CityPage(props) {
                 <input type="submit" className="submit-button"></input>
             </form>
         </div>
+        <div style={{visibility: "hidden"}} className="bottom-space">.</div>
+        </>
     );
 }
