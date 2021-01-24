@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './CityCard.css';
 import fiveStars from './images/stars/5stars.svg';
 import fourStars from './images/stars/4stars.svg';
@@ -26,7 +27,7 @@ export default function CityCard(props) {
 
     return (
         <div className="city-card-container">
-            <h3 className="city-card-name">{props.city}</h3>
+            <Link to={`/city/${props.id}`} id="link"><h3 className="city-card-name">{props.city}</h3></Link>
             <img src={props.img} alt={props.city} className="city-card-image"/>
             <div className="city-card-total">{props.total}</div>
             {stars()}
