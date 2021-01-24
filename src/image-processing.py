@@ -1,5 +1,7 @@
 import PyPDF2 as pypdf 
+import csv
 import pandas as pd
+import json
 
 def findAllSubstrings(a_str, sub, boundary = 0):
     start = 0
@@ -10,6 +12,9 @@ def findAllSubstrings(a_str, sub, boundary = 0):
         start += len(sub)
 #use list (findAllSubstrings(...)) to get a list of each index
 #note: set boundary = 3 because there is a space between the "out of" text and at most 2 digit numbers. if we get extra text at the front, we need to get rid of it regardless
+
+def formatRow(row):
+    return row['name']
 
 def main(): 
     #load in one pdf - los angeles
@@ -46,8 +51,8 @@ def main():
             scores[numScores][1] = int(possibScore)
             numScores += 1
 
-    for i in range(len(scores)):
-        print(str(scores[i][0]) + " out of " +  str(scores[i][1]))
+    '''for i in range(len(scores)):
+        print(str(scores[i][0]) + " out of " +  str(scores[i][1]))'''
 
     ratingCategories = {
         "non-disc laws": scores[0], 
@@ -57,7 +62,15 @@ def main():
         "law enforcement": scores[4]
     } #note: order is 1-3, 5, 4
 
-    print(ratingCategories["non-disc laws"])
+    #move dictionary to csv 
+    df = pd.DataFrame.from_dict(ratingCategories, orient="index") #figure out why this works
+    df.to_csv("citydata.csv")
+
+    '''listWriter = csv.writer(open("citydata.csv", "w"), delimiter=",", quotechar="|")
+    for a in ratingCategories:
+        listWriter.writerow(formatRow(a))''' #error: string indices must be integers
     
+    json_object = json.dumps(ratingCategories, indent=4)
+    loaded_json = json.loads(json_object)
 main()
     #use pandas to move dictionary to csv? maybe make a City class type with each of the attributes
