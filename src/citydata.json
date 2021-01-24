@@ -1,112 +1,90 @@
 {
-  "Baton Rouge Louisiana": {
-    "non-disc laws": [
-      0,
-      30
-    ],
-    "municipality as employer": [
-      14,
-      28
-    ],
-    "municipal services": [
-      5,
-      12
-    ],
-    "leadership on equality": [
-      3,
+  "Albany New York": {
+    "city": "Albany New York",
+    "ratings": [
+      30,
+      26,
+      12,
+      22,
       8
     ],
-    "law enforcement": [
+    "total": 98
+  },
+  "Baton Rouge Louisiana": {
+    "city": "Baton Rouge Louisiana",
+    "ratings": [
+      0,
+      14,
+      5,
       12,
-      22
-    ]
+      3
+    ],
+    "total": 34
   },
   "Phoenix Arizona": {
-    "non-disc laws": [
+    "city": "Phoenix Arizona",
+    "ratings": [
       28,
-      30
-    ],
-    "municipality as employer": [
       28,
-      28
-    ],
-    "municipal services": [
       12,
-      12
-    ],
-    "leadership on equality": [
-      8,
+      22,
       8
     ],
-    "law enforcement": [
+    "total": 98
+  },
+  "Bismarck North Dakota": {
+    "city": "Bismarck North Dakota",
+    "ratings": [
+      30,
+      14,
+      5,
+      12,
+      2
+    ],
+    "total": 63
+  },
+  "Houston Texas": {
+    "city": "Houston Texas",
+    "ratings": [
+      0,
+      28,
+      5,
       22,
-      22
-    ]
+      8
+    ],
+    "total": 63
   },
   "Auburn Alabama": {
-    "non-disc laws": [
+    "city": "Auburn Alabama",
+    "ratings": [
       0,
-      30
-    ],
-    "municipality as employer": [
       16,
-      28
-    ],
-    "municipal services": [
       5,
-      12
-    ],
-    "leadership on equality": [
       0,
-      8
+      0
     ],
-    "law enforcement": [
-      0,
-      22
-    ]
+    "total": 21
   },
   "Los Angeles California": {
-    "non-disc laws": [
+    "city": "Los Angeles California",
+    "ratings": [
       30,
-      30
-    ],
-    "municipality as employer": [
       26,
-      28
-    ],
-    "municipal services": [
       7,
-      12
-    ],
-    "leadership on equality": [
-      8,
+      22,
       8
     ],
-    "law enforcement": [
-      22,
-      22
-    ]
+    "total": 93
   },
   "New York New York": {
-    "non-disc laws": [
+    "city": "New York New York",
+    "ratings": [
       30,
-      30
-    ],
-    "municipality as employer": [
       28,
-      28
-    ],
-    "municipal services": [
       7,
-      12
-    ],
-    "leadership on equality": [
-      8,
+      22,
       8
     ],
-    "law enforcement": [
-      22,
-      22
-    ]
+    "total": 95
   }
 }

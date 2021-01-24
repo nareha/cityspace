@@ -31,7 +31,8 @@ def loadSinglePdf(file):
         #for some reason, the pdf reader will extract in such a way that the categories on page 2 come in reverse order
         #ie we get categories 1-3 then 5, 4
     
-    scores = [[0,0], [0,0], [0,0], [0,0], [0,0]]
+    scores = [0,0,0,0,0]
+    #scores = [[0,0], [0,0], [0,0], [0,0], [0,0]]
     numScores = 0
     for i in range(len(valueList)):
         for j in range(len(valueList[i])):
@@ -40,29 +41,43 @@ def loadSinglePdf(file):
             for k in range (0, bounIndex):
                 if (valueList[i][j][k].isdigit()):
                     score += valueList[i][j][k]
-            scores[numScores][0] = int(score)
-            possibScore = ""
+            scores[numScores] = int(score)
+            '''possibScore = ""
             for k in range (bounIndex + len("out of"), len(valueList[i][j])):
                 if (valueList[i][j][k].isdigit()):
                     possibScore += valueList[i][j][k]
-            scores[numScores][1] = int(possibScore)
+            scores[numScores][1] = int(possibScore)'''
             numScores += 1    
+    
+    #order is 1-3, 5, 4 for whatever reason, so swap
+    swapScore = scores[3]
+    scores[3] = scores[4]
+    scores[4] = swapScore
 
-    ratingCategories = {
-        "non-disc laws": scores[0], 
-        "municipality as employer": scores[1],
-        "municipal services": scores[2],
-        "leadership on equality": scores[3],
-        "law enforcement": scores[4]
-    } #note: order is 1-3, 5, 4
+    #determine total score
+    totalScore = 0
+    for i in range(len(scores)):
+        totalScore += scores[i]
 
-    return ratingCategories
+    #retrieve city name as an attribute
+    cityName = file.replace("mei-files/MEI-2020-", "")
+    cityName = cityName.replace(".pdf", "")
+    cityName = cityName.replace("-", " ")
+
+    ratingData = {
+        "city": cityName,
+        "ratings": scores,
+        "total": totalScore
+    }
+
+    return ratingData
 
 def loadAllPdfs(files):
     open("citydata.json", "w").close() #clear file first when loading all pdfs to avoid repeats
     cities = {} #dictionary to hold all the cities. each name has a dictionary of ratingCategories
 
     for file in files:
+        #still get city name to title each dictionary
         cityName = file.replace("mei-files/MEI-2020-", "")
         cityName = cityName.replace(".pdf", "")
         cityName = cityName.replace("-", " ")
