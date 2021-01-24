@@ -70,6 +70,7 @@ def loadSinglePdf(file):
         json.dump(ratingCategories, outfile)
 
 def loadAllPdfs(files):
+    open("citydata.json", "w").close() #clear file first when loading all pdfs to avoid repeats
     for file in files:
         print(file)
         loadSinglePdf(file)
