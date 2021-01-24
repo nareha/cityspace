@@ -42,7 +42,7 @@ export default function CityCard(props) {
         (error) =>
           console.error("Error getting documents: ", error));
       }
-      useEffect(setupFirestoreListener, []);
+      useEffect(setupFirestoreListener);
 
     return (
         <div className="city-card-container">

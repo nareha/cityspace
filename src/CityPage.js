@@ -8,7 +8,7 @@ import SubmitReview from './SubmitReview.js';
 
 const db = firebase.firestore();
 
-const citydata = require('./citydata.json');
+//const citydata = require('./citydata.json');
 
 export default function CityPage(props) {
 
@@ -26,7 +26,7 @@ export default function CityPage(props) {
       (error) =>
         console.error("Error getting documents: ", error));
     }
-    useEffect(setupFirestoreListener, []);
+    useEffect(setupFirestoreListener);
 
     const createReview = (username, content, rating, callback) => {
         db.collection(props.city).doc()
