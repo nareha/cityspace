@@ -26,3 +26,6 @@ As unfortunate as it may be, living standards and societal treatment of LGBTQ+ p
 
 We extracted our data from the [2020 Municipal Equality Index](https://www.hrc.org/resources/mei-2020-see-your-citys-score)
 
+## Video Demonstration
+https://youtu.be/LEwP_NI-bTo
+
