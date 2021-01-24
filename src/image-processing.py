@@ -69,8 +69,9 @@ def main():
     '''listWriter = csv.writer(open("citydata.csv", "w"), delimiter=",", quotechar="|")
     for a in ratingCategories:
         listWriter.writerow(formatRow(a))''' #error: string indices must be integers
-    
-    json_object = json.dumps(ratingCategories, indent=4)
-    loaded_json = json.loads(json_object)
+
+    with open("citydata.json", "w") as outfile:    
+        json.dump(ratingCategories, outfile)
+
 main()
     #use pandas to move dictionary to csv? maybe make a City class type with each of the attributes
