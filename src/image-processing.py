@@ -4,11 +4,12 @@ import pandas as pd
 def findAllSubstrings(a_str, sub):
     start = 0
     while True:
-        start = a_str.find(sub, start)
+        start = a_str.find(sub, start) #get the index of each substring
         if start == -1: return
-        yield start #return the index of each substring as we find them. python do be kinda epic
+        yield a_str[start - 3:start+len(sub) + 3] #return the substring itself as we find them. python do be kinda epic
         start += len(sub)
 #use list (findAllSubstrings(...)) to get a list of each index
+#note: start-3 and +3 because there is a space between the "out of" text and at most 2 digit numbers. if we get extra text at the front, we need to get rid of it regardless
 
 def main(): 
     #load in one pdf - los angeles
@@ -23,6 +24,7 @@ def main():
     for i in range(laNumPages):
         currPage = losangeles.getPage(i) #pages start indexed at 0
         textList[i] = currPage.extractText()
+        #print(textList[i])
         valueList[i] = list(findAllSubstrings(textList[i], "out of"))
 
     for i in range(len(valueList)):
