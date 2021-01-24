@@ -1,68 +1,90 @@
 {
-  "Baton-Rouge-Louisiana": {
-    "non-disc laws": [
-      0,
-      30
-    ],
-    "municipality as employer": [
-      14,
-      28
-    ],
-    "municipal services": [
-      5,
-      12
-    ],
-    "leadership on equality": [
-      3,
-      8
-    ],
-    "law enforcement": [
-      12,
-      22
-    ]
-  },
-  "Auburn-Alabama": {
-    "non-disc laws": [
-      0,
-      30
-    ],
-    "municipality as employer": [
-      16,
-      28
-    ],
-    "municipal services": [
-      5,
-      12
-    ],
-    "leadership on equality": [
-      0,
-      8
-    ],
-    "law enforcement": [
-      0,
-      22
-    ]
-  },
-  "Los-Angeles-California": {
-    "non-disc laws": [
+  "Albany New York": {
+    "city": "Albany New York",
+    "ratings": [
       30,
-      30
-    ],
-    "municipality as employer": [
       26,
-      28
-    ],
-    "municipal services": [
-      7,
-      12
-    ],
-    "leadership on equality": [
-      8,
+      12,
+      22,
       8
     ],
-    "law enforcement": [
+    "total": 98
+  },
+  "Baton Rouge Louisiana": {
+    "city": "Baton Rouge Louisiana",
+    "ratings": [
+      0,
+      14,
+      5,
+      12,
+      3
+    ],
+    "total": 34
+  },
+  "Phoenix Arizona": {
+    "city": "Phoenix Arizona",
+    "ratings": [
+      28,
+      28,
+      12,
       22,
-      22
-    ]
+      8
+    ],
+    "total": 98
+  },
+  "Bismarck North Dakota": {
+    "city": "Bismarck North Dakota",
+    "ratings": [
+      30,
+      14,
+      5,
+      12,
+      2
+    ],
+    "total": 63
+  },
+  "Houston Texas": {
+    "city": "Houston Texas",
+    "ratings": [
+      0,
+      28,
+      5,
+      22,
+      8
+    ],
+    "total": 63
+  },
+  "Auburn Alabama": {
+    "city": "Auburn Alabama",
+    "ratings": [
+      0,
+      16,
+      5,
+      0,
+      0
+    ],
+    "total": 21
+  },
+  "Los Angeles California": {
+    "city": "Los Angeles California",
+    "ratings": [
+      30,
+      26,
+      7,
+      22,
+      8
+    ],
+    "total": 93
+  },
+  "New York New York": {
+    "city": "New York New York",
+    "ratings": [
+      30,
+      28,
+      7,
+      22,
+      8
+    ],
+    "total": 95
   }
 }
