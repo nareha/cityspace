@@ -6,6 +6,18 @@ import LA from './images/LA.svg';
 import './Main.css';
 
 function App() {
+
+  const citydata = require('./citydata.json');
+
+  const CityCards = Object.keys(citydata).map((city) => {
+    console.log(Object.values(citydata[city]));
+
+    const sum = Object.values(citydata[city]).
+    reduce((existing, current) => {return existing + current[0]}, 0);
+
+    return <CityCard id={city} city={city} total={`${sum} / 100`} img={LA} />
+  })
+
   return (
       <>
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,11 +29,7 @@ function App() {
         <div className="top-cities">
           <h2>Top LGBTQ+ Friendly Cities:</h2>
           <div className="city-card-list">
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA} />
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
+            {CityCards}
           </div>
         </div>
         <div style={{visibility: "hidden"}} className="bottom-space">.</div>

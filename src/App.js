@@ -2,17 +2,19 @@ import React from "react";
 import { Switch, Route } from "react-router-dom"
 import Main from './Main';
 import CityPage from './CityPage';
-import LA from './images/LA.svg';
 import Navbar from './Navbar.js';
 import './Main.css';
-
+/*
 const db = {
-  LA: {
-    city:"Los Angeles, CA",
-    total:"108 / 100",
-    img:LA
+  "Los-Angeles-California": {
+    city:"Los-Angeles-California",
+    numbers: [30, 26, 7, 8, 22]
+    total: 93,
+    // img:LA
   }
 }
+*/
+const citydata = require('./citydatatest.json');
 
 function App() {
     return (
@@ -25,7 +27,7 @@ function App() {
               <Route exact path="/">
                 <Main />
               </Route>
-              <Route path="/city/:cityname" render = {(props) => <CityPage {...db[props.match.params.cityname]} />} />
+              <Route path="/city/:cityname" render = {(props) => <CityPage {...citydata[props.match.params.cityname]} />} />
             </Switch>
           </div>
         </div>

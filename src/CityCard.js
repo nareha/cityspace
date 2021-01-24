@@ -32,6 +32,7 @@ export default function CityCard(props) {
     }
     
     const setupFirestoreListener = () => {
+        console.log(props);
         return db.collection("reviews-la")
         .onSnapshot((snapshot) => {
           const totalStars = snapshot.docs.reduce(
