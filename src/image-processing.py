@@ -26,7 +26,9 @@ def main():
         textList[i] = currPage.extractText()
         #print(textList[i])
         valueList[i] = list(findAllSubstrings(textList[i], "out of"))
-
+        #for some reason, the pdf reader will extract in such a way that the categories on page 2 come in reverse order
+        #ie we get categories 1-3 then 5, 4
+        
     for i in range(len(valueList)):
         print(valueList[i])
 
