@@ -4,11 +4,13 @@ import searchButton from './images/searchButton.svg';
 import CityCard from './CityCard.js';
 import LA from './images/LA.svg';
 import './App.css';
+import Navbar from './Navbar.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="navbar">
+        <Navbar />
       </header>
       <body>
         <img src={logo} className="App-logo" alt="logo" />
