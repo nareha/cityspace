@@ -28,3 +28,6 @@ We extracted our data from the [2020 Municipal Equality Index](https://www.hrc.o
 
 ## Video Demonstration 
 https://youtu.be/LEwP_NI-bTo
+
+## The Website
+https://cityspace.netlify.app/
