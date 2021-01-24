@@ -1,5 +1,5 @@
 {
-  "Baton-Rouge-Louisiana": {
+  "Baton Rouge Louisiana": {
     "non-disc laws": [
       0,
       30
@@ -21,7 +21,29 @@
       22
     ]
   },
-  "Auburn-Alabama": {
+  "Phoenix Arizona": {
+    "non-disc laws": [
+      28,
+      30
+    ],
+    "municipality as employer": [
+      28,
+      28
+    ],
+    "municipal services": [
+      12,
+      12
+    ],
+    "leadership on equality": [
+      8,
+      8
+    ],
+    "law enforcement": [
+      22,
+      22
+    ]
+  },
+  "Auburn Alabama": {
     "non-disc laws": [
       0,
       30
@@ -43,13 +65,35 @@
       22
     ]
   },
-  "Los-Angeles-California": {
+  "Los Angeles California": {
     "non-disc laws": [
       30,
       30
     ],
     "municipality as employer": [
       26,
+      28
+    ],
+    "municipal services": [
+      7,
+      12
+    ],
+    "leadership on equality": [
+      8,
+      8
+    ],
+    "law enforcement": [
+      22,
+      22
+    ]
+  },
+  "New York New York": {
+    "non-disc laws": [
+      30,
+      30
+    ],
+    "municipality as employer": [
+      28,
       28
     ],
     "municipal services": [

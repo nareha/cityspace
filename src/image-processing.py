@@ -65,6 +65,7 @@ def loadAllPdfs(files):
     for file in files:
         cityName = file.replace("mei-files/MEI-2020-", "")
         cityName = cityName.replace(".pdf", "")
+        cityName = cityName.replace("-", " ")
         print(cityName)
         cities[cityName] = loadSinglePdf(file)
 
