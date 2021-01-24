@@ -3,12 +3,28 @@
     border-radius: 40px;
     display: flex;
     flex-direction: column;
+    width: 900px;
+    align-items: center;
+    padding: 20px;
+}
+
+.city-page-title {
+    margin: 0 0 20px 0;
 }
 
 .city-page-info {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 18px;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.city-page-image {
+    width: 350px;
+    height: 270px;
+    margin: 0;
 }
 
 .city-page-stats {
@@ -17,8 +33,70 @@
     align-items: center;
     background-color: #C2E9FF;
     border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.criteria-and-numbers {
+    display: flex;
+    flex-direction: row;
 }
 
 .criteria {
-    white-space: pre-wrap;
+    text-align: left;
+}
+
+.numbers {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.city-page-total-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 24px;
+    margin: 5px;
+}
+
+.city-page-total {
+    font-weight: bold;
+    background: #FFE896;
+    padding: 10px 2px;
+    width: 120px;
+    border-radius: 100px;
+}
+
+.user-review-container {
+    background-color: #FFC8DC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 765px;
+}
+
+.user-review-title {
+    margin: 10px 20px;
+    left: 0;
+}
+
+.new-answer-form {
+    background-color: #FFEBA3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.form-content {
+
+}
+
+.submit-button {
+    border: none;
+    font-family: "Poppins", sans-serif;
+    border-radius: 20px;
+    background-color: #FFC8DC;
 }

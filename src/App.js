@@ -5,11 +5,13 @@ import CityCard from './CityCard.js';
 import LA from './images/LA.svg';
 import './App.css';
 import CityPage from './CityPage.js';
+import Navbar from './Navbar.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="navbar">
+        <Navbar />
       </header>
       <body>
         <img src={logo} className="App-logo" alt="logo" />
@@ -29,7 +31,8 @@ function App() {
           </div>
         </div>
         {/*move this later*/}
-        <CityPage city="Los Angeles, CA" img={LA}/>
+        <CityPage city="Los Angeles, CA" total="108 / 100" img={LA}/>
+        <div style={{visibility: "hidden"}} className="bottom-space">.</div>
       </body>
     </div>
   );
