@@ -18,9 +18,9 @@
   pointer-events: none;
 }
 
-body {
+.main-body {
   z-index: 0;
-  padding-top: 70px;
+  padding-top: 120px;
   width: 100%;
   display: flex;
   flex-direction: column;
