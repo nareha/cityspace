@@ -19,6 +19,7 @@ def formatRow(row):
 
 def loadSinglePdf(file):
     pdfFile = pypdf.PdfFileReader(file)
+    pdfInfo = pdfFile.getDocumentInfo()
     pdfNumPages = pdfFile.getNumPages()
     textList = ["", ""] #initialize empty textList. each document is 2 pages, so 2 items is enough.
     valueList = [[], []] #this will contain the text surrounding the number values we need
@@ -26,6 +27,7 @@ def loadSinglePdf(file):
         currPage = pdfFile.getPage(i) #pages start indexed at 0
         textList[i] = currPage.extractText()
         valueList[i] = list(findAllSubstrings(textList[i], "out of", 3))
+        #print(textList[i])
         #for some reason, the pdf reader will extract in such a way that the categories on page 2 come in reverse order
         #ie we get categories 1-3 then 5, 4
     
@@ -46,9 +48,6 @@ def loadSinglePdf(file):
             scores[numScores][1] = int(possibScore)
             numScores += 1    
 
-    for i in range(len(scores)):
-        print(str(scores[i][0]) + " out of " +  str(scores[i][1]))
-
     ratingCategories = {
         "non-disc laws": scores[0], 
         "municipality as employer": scores[1],
@@ -57,9 +56,17 @@ def loadSinglePdf(file):
         "law enforcement": scores[4]
     } #note: order is 1-3, 5, 4
 
-    #move dictionary to csv 
-    df = pd.DataFrame.from_dict(ratingCategories, orient="index") #figure out why this works
-    df.to_csv("citydata.csv")
+    return ratingCategories
+
+def loadAllPdfs(files):
+    open("citydata.json", "w").close() #clear file first when loading all pdfs to avoid repeats
+    cities = {} #dictionary to hold all the cities. each name has a dictionary of ratingCategories
+
+    for file in files:
+        cityName = file.replace("mei-files/MEI-2020-", "")
+        cityName = cityName.replace(".pdf", "")
+        print(cityName)
+        cities[cityName] = loadSinglePdf(file)
 
     #error: string indices must be integers
     '''listWriter = csv.writer(open("citydata.csv", "w"), delimiter=",", quotechar="|")
@@ -67,13 +74,7 @@ def loadSinglePdf(file):
         listWriter.writerow(formatRow(a))''' 
 
     with open("citydata.json", "a") as outfile:    
-        json.dump(ratingCategories, outfile)
-
-def loadAllPdfs(files):
-    open("citydata.json", "w").close() #clear file first when loading all pdfs to avoid repeats
-    for file in files:
-        print(file)
-        loadSinglePdf(file)
+        json.dump(cities, outfile, indent=2)
 
 def main(): 
     meiFiles = glob.glob('mei-files/*.pdf', recursive=True) #read all pdf files as an iterable
