@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import firebase from './firebase';
+import { useState, useEffect } from 'react';
 import './CityCard.css';
 import fiveStars from './images/stars/5stars.svg';
 import fourStars from './images/stars/4stars.svg';
@@ -6,10 +8,14 @@ import threeStars from './images/stars/3stars.svg';
 import twoStars from './images/stars/2stars.svg';
 import oneStar from './images/stars/1star.svg';
 
+const db = firebase.firestore();
+
 export default function CityCard(props) {
 
+    const [avgStars, setaverageStars] = useState(-1);
+
     const stars = () => {
-        switch(props.stars) {
+        switch(avgStars) {
             case 5: 
                 return (<img src={fiveStars} alt="five stars" className="city-card-rating"/>);
             case 4:
@@ -24,6 +30,18 @@ export default function CityCard(props) {
                 return ("error");
         }
     }
+    
+    const setupFirestoreListener = () => {
+        return db.collection("reviews-la")
+        .onSnapshot((snapshot) => {
+          const totalStars = snapshot.docs.reduce(
+            (existing, current) => { return existing + current.data().rating},0);
+            setaverageStars(Math.round(totalStars/snapshot.size));
+        },
+        (error) =>
+          console.error("Error getting documents: ", error));
+      }
+      useEffect(setupFirestoreListener, []);
 
     return (
         <div className="city-card-container">

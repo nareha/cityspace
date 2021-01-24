@@ -1,8 +1,46 @@
+import { useEffect, useState } from 'react';
+import firebase from './firebase';
 import './CityPage.css';
 import './Main.css';
 import Review from './Review.js';
+import SubmitReview from './SubmitReview.js';
+
+const db = firebase.firestore();
 
 export default function CityPage(props) {
+
+    const [reviews, setReviews] = useState([]);
+  
+    const setupFirestoreListener = () => {
+      return db.collection("reviews-la")
+      .orderBy("date", "desc")
+      .onSnapshot((snapshot) => {
+        const reviews = snapshot.docs.map((doc) => {
+          return {...doc.data(), id: doc.id}
+        });
+        setReviews(reviews);
+      },
+      (error) =>
+        console.error("Error getting documents: ", error));
+    }
+    useEffect(setupFirestoreListener, []);
+
+    const createReview = (username, content, rating, callback) => {
+        db.collection("reviews-la").doc()
+          .set({
+              name: username,
+              text: content,
+              rating: rating,
+              date: Date.now(),
+          })
+          .then(() => {
+              callback();
+          })
+          .catch((error) => {
+            console.error("Error adding document: ", error);
+          });
+    }
+    
     return (
         <>
         <div className="city-page-container">
@@ -36,29 +74,13 @@ export default function CityPage(props) {
             </div>
             <div className="user-review-container">
                 <h2 className="user-review-title">User Reviews</h2>
-                <Review user="user_name" stars={5} />
+                {
+                    reviews.map((review) => {
+                        return <Review user={review.name} text={review.text} stars={review.rating} />
+                    })
+                }
             </div>
-            <form className="new-answer-form">
-                <div className="form-content">
-                    <div className="form-content-top">
-                        <label for="username">username:</label>
-                        <input type="text" id="username" className="username-input"></input>
-                        <label for="rating">rating:</label>
-                        <select id="rating" className="rating-input">
-                            <option value={5}>5</option>
-                            <option value={4}>4</option>
-                            <option value={3}>3</option>
-                            <option value={2}>2</option>
-                            <option value={1}>1</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="content">add review:</label>
-                        <textarea id="content" className="content-input"></textarea>
-                    </div>
-                </div>
-                <input type="submit" className="submit-button"></input>
-            </form>
+            <SubmitReview createReview={createReview} />
         </div>
         <div style={{visibility: "hidden"}} className="bottom-space">.</div>
         </>

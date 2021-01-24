@@ -30,7 +30,7 @@ export default function Review(props) {
                 <div>from {props.user}:</div>
                 {stars(props.stars)}
             </div>
-            <div className="review-content">I love this city uwu go bruwuins! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
+            <div className="review-content">{props.text}</div>
         </div>
     );
 }

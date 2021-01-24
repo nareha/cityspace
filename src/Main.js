@@ -17,11 +17,11 @@ function App() {
         <div className="top-cities">
           <h2>Top LGBTQ+ Friendly Cities:</h2>
           <div className="city-card-list">
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" stars={5} img={LA} />
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
-            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" stars={5} img={LA}/>
+            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA} />
+            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
+            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
+            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
+            <CityCard id="LA" city="Los Angeles, CA" total="108 / 100" img={LA}/>
           </div>
         </div>
         <div style={{visibility: "hidden"}} className="bottom-space">.</div>
