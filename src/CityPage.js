@@ -70,7 +70,7 @@ export default function CityPage(props) {
                     <div className="city-page-total-container">
                         <div>Total:</div><div className="city-page-total">{`${props.total} / 100`}</div>
                     </div>
-                    <a href="https://hrc-prod-requests.s3-us-west-2.amazonaws.com/MEI-2020-Los-Angeles-California.pdf?mtime=20201202092920&focal=none">MEI 2020 Score Breakdown</a>
+                    <a href={props.link}>MEI 2020 Score Breakdown</a>
                 </div>
             </div>
             <div className="user-review-container">
