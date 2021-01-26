@@ -4,15 +4,18 @@ import './CityPage.css';
 import './Main.css';
 import Review from './Review.js';
 import LA from './images/LA.svg';
+import Albany from './images/Albany.jpeg';
+import Phoenix from './images/Phoenix.jpg';
+import NYC from './images/nyc.jpg';
 import SubmitReview from './SubmitReview.js';
 
 const db = firebase.firestore();
 
-//const citydata = require('./citydata.json');
-
 export default function CityPage(props) {
 
     const [reviews, setReviews] = useState([]);
+
+    const images = [Albany, Phoenix, LA, NYC];
   
     const setupFirestoreListener = () => {
       return db.collection(props.database)
@@ -49,7 +52,7 @@ export default function CityPage(props) {
         <div className="city-page-container">
             <h1 className='city-page-title'>{props.city}</h1>
             <div className="city-page-info">
-                <img src={LA} alt={props.city} className="city-page-image"/>
+                <img src={images[props.index]} alt={props.city} className="city-page-image"/>
                 <div className="city-page-stats">
                     <div className="criteria-and-numbers">
                         <div className="criteria">

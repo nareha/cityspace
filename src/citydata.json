@@ -10,7 +10,8 @@
     ],
     "total": 98,
     "link": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/MEI-2020-Albany-New-York.pdf?mtime=20201202124709&focal=none",
-    "database": "Albany New York"
+    "database": "Albany New York",
+    "index": 0
   },
   "Phoenix": {
     "city": "Phoenix, Arizona",
@@ -23,7 +24,8 @@
     ],
     "total": 98,
     "link": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/MEI-2020-Phoenix-Arizona.pdf?mtime=20201202093046&focal=none",
-    "database": "Phoenix Arizona"
+    "database": "Phoenix Arizona",
+    "index": 1
   },
   "Los Angeles": {
     "city": "Los Angeles, California",
@@ -36,7 +38,8 @@
     ],
     "total": 93,
     "link": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/MEI-2020-Los-Angeles-California.pdf?mtime=20201202092920&focal=none",
-    "database": "Los Angeles California"
+    "database": "Los Angeles California",
+    "index": 2
   },
   "New York": {
     "city": "New York, New York",
@@ -49,6 +52,7 @@
     ],
     "total": 95,
     "link": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/MEI-2020-New-York-New-York.pdf?mtime=20201202124713&focal=none",
-    "database": "New York New York"
+    "database": "New York New York",
+    "index": 3
   }
 }
