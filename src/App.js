@@ -27,7 +27,7 @@ function App() {
               <Route exact path="/">
                 <Main />
               </Route>
-              <Route path="/city/:cityname" render = {(props) => <CityPage {...citydata[props.match.params.cityname]} />} />
+              <Route path="/city/:cityname" render = {(props) => <CityPage {...citydata[props.match.params.cityname]} />}/>
             </Switch>
           </div>
         </div>

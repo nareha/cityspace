@@ -15,7 +15,7 @@ export default function CityPage(props) {
     const [reviews, setReviews] = useState([]);
   
     const setupFirestoreListener = () => {
-      return db.collection(props.city)
+      return db.collection(props.database)
       .orderBy("date", "desc")
       .onSnapshot((snapshot) => {
         const reviews = snapshot.docs.map((doc) => {
@@ -29,7 +29,7 @@ export default function CityPage(props) {
     useEffect(setupFirestoreListener);
 
     const createReview = (username, content, rating, callback) => {
-        db.collection(props.city).doc()
+        db.collection(props.database).doc()
           .set({
               name: username,
               text: content,

@@ -15,9 +15,7 @@ function App() {
   const citydata = require('./citydata.json');
 
   const CityCards = Object.keys(citydata).map((city, index) => {
-    console.log(city);
-
-    return <CityCard id={city} city={city} total={`${citydata[city].total} / 100`} img={images[index]} />
+    return <CityCard id={city} city={citydata[city].city} total={`${citydata[city].total} / 100`} img={images[index]} database={citydata[city].database}/>
   })
 
   return (
