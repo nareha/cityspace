@@ -31,3 +31,7 @@ https://youtu.be/LEwP_NI-bTo
 
 ## The Website
 https://cityspace.netlify.app/
+
+## Devpost
+**We won 1st place in QWER HACKS 2021's Public Policy track!**
+https://devpost.com/software/cityspace-live-in-your-safe-space
